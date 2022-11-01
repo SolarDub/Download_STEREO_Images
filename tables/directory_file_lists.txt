@@ -1,0 +1,3 @@
+THIS_SCRIPT_DIR=/Users/pwilliams/Documents/Research/stereo/stereo_wget
+HI1A_DATA_DIR=/Users/pwilliams/Documents/Research/stereo/h1A
+HI1A_DATA_URL=https://stereo-ssc.nascom.nasa.gov/pub/ins_data/secchi_hi/L2/a/img/hi_1

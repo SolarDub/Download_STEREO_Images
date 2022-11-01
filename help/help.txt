@@ -1,0 +1,39 @@
+
+******************************************************************************************
+
+*************************
+stereo_wget.sh HELP FILE
+*************************
+
+
+To execute:
+
+    ./stereo_wget.sh [--help] [-d] [-u]
+
+Description:
+
+    -h, --help	Prints this help file
+
+    -d, --dir	Prompts user to change directory paths.
+
+		First path is to this script to be verified by the user.
+		This is necessary to establish a path to the directory/URL text file.
+		
+		Second path is to the base STEREO HI1A data directory.
+		Default has the form ##/##/stereo/h1a
+
+		If this is updated here, it should also be updated when the user runs
+		the script to process the HI1A full timage data into target pixel files.
+
+    -u, --url	Prompts user to change URL path.
+
+		This is the base path to the STEREO HI1A data.
+		
+		Default: 
+
+		https://stereo-ssc.nascom.nasa.gov/pub/ins_data/secchi_hi/L2/a/img/hi_1
+
+
+******************************************************************************************
+
+
