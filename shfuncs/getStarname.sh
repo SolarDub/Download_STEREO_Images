@@ -4,7 +4,7 @@
 # Get Starname from user
 function getStarname() {
 
-  if [[ $SWS == *"-s"* ]]   # Perform only if star selection is requested
+  if [[ $SWS == *"-s"* ]] || [[ $SWS == *"-c"* ]]   # Perform only if star or coordinate selection is requested
   then
 
     PRMPT1="Enter single star name"  # Create user prompt text

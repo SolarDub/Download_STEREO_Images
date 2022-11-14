@@ -108,7 +108,19 @@ echo ${HI1ADIR}
 echo ${HI1AURL}
 echo ""
 
-if [[ $SWS == *"-s"* ]]
+if [[ $SWS == *"-s"* ]] && [[ $SWS == *"-r"* ]]
+then
+
+  echo ""
+  echo "The date range (--range) and the star selection (--star) cannot be used at the same time."
+  echo ""
+
+  exit
+
+fi
+
+
+if [[ $SWS == *"-s"* ]] || [[ $SWS == *"-c"* ]]
 then
 
   #############################
@@ -123,6 +135,10 @@ then
     coords="$(getCoords $star)"
     echo "Coordinates of "${star}": "${coords}
     echo ""
+  fi
+
+  if [[ $SWS == *"-c"* ]]; then
+    exit
   fi
 
   starname="$(echo -e "${star}" | tr -d '[:space:]')"   # Remove remaining whitespaces

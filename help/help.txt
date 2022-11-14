@@ -8,11 +8,13 @@ wget_Images.sh HELP FILE
 
 To execute:
 
-    ./wget_Images.sh [--help] [-d] [-s] [-u]
+    ./wget_Images.sh [--help] [-c] [-d] [-r] [-s] [-u]
 
 Description:
 
     -h, --help	Prints this help file
+
+    -c, --coord Prompts user to enter a star name, outputs the star's celestial 			coordinates before halting execution.
 
     -d, --dir	Prompts user to change directory paths.
 
@@ -24,6 +26,16 @@ Description:
 
 		If this is updated here, it should also be updated when the user runs
 		the script to process the HI1A full timage data into target pixel files.
+
+    -r, --range	Prompts user to enter a date range over which to download the images.
+
+		Images can be selected and downloaded from a start date to an end date
+		as specified by the user. Both dates should be entered in the format:
+		
+		YYYY/MM/DD
+
+		The -r and -s switches cannot be used at  the same time and will
+		cause the execution to stop.
 
     -s, --star	Prompts user to enter star name followed by orbit number.
 
@@ -40,6 +52,9 @@ Description:
 		star entering the field of view. The CreateTPFs program will use these
 		images to search for the appearance of the star at which point the
 		Target Pixel Images for the star will be produced.
+
+		The -r and -s switches cannot be used at  the same time and will
+		cause the execution to stop.
 
     -u, --url	Prompts user to change URL path.
 
