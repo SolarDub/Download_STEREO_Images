@@ -8,7 +8,7 @@ stereo_wget.sh HELP FILE
 
 To execute:
 
-    ./stereo_wget.sh [--help] [-d] [-u]
+    ./wget_Images.sh [--help] [-d] [-u]
 
 Description:
 

@@ -13,7 +13,7 @@ function getOrbits() {
 
     while [[ $ORBS > "17" ]] && [[ $ORBS != "0" ]]; do   # Orbits 1-17 available. 0 to quit.
 
-      PRMPT1="Enter orbit (up to 17 allowed right now)"  # Create user prompt text
+      PRMPT1="Enter orbit (up to 17)"  # Create user prompt text
       PRMPT2="(use switch --ohelp to list orbits and dates)"
       PRMPT3="Enter 0 to quit."
 
