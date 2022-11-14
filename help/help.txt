@@ -2,13 +2,13 @@
 ******************************************************************************************
 
 *************************
-stereo_wget.sh HELP FILE
+wget_Images.sh HELP FILE
 *************************
 
 
 To execute:
 
-    ./wget_Images.sh [--help] [-d] [-u]
+    ./wget_Images.sh [--help] [-d] [-s] [-u]
 
 Description:
 
@@ -24,6 +24,22 @@ Description:
 
 		If this is updated here, it should also be updated when the user runs
 		the script to process the HI1A full timage data into target pixel files.
+
+    -s, --star	Prompts user to enter star name followed by orbit number.
+
+		Images can be selected and downloaded to include a star of the user's
+		choice during a specified orbit.
+
+		The coordinates of the star will be acquired from SIMBAD, so the starname 		should be in a form usable by SIMBAD. For example, 12Sgr or 12 Sgr will 		both work. However, while DX Aqr will work, DXAQR will not.
+
+		The selected orbit number should lay between 1 and 17. Use the --ohelp
+		switch to see the list of STEREO A orbit numbers and their respective
+		observation date/time ranges.
+
+		The downloaded image files will include observations prior to the chosen
+		star entering the field of view. The CreateTPFs program will use these
+		images to search for the appearance of the star at which point the
+		Target Pixel Images for the star will be produced.
 
     -u, --url	Prompts user to change URL path.
 
