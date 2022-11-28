@@ -157,7 +157,7 @@ then
     echo ""
   fi
 
-  DATES=$(./getDateRange.exe $starname $coords $BASDIR $HI1ADIR $ORBS)
+  DATES=$(./bin/getDateRange $starname $coords $BASDIR $HI1ADIR $ORBS)
   echo ${DATES}
   STARTDATE=${DATES:0:8}
   ENDDATE=${DATES:9:8}

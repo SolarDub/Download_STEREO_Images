@@ -1,6 +1,6 @@
-BINARY=getDateRange.exe
+BINARY=./bin/getDateRange
 CODEDIRS=. ./lib ./lib/C
-IDIRS=. ./include # can be list
+IDIRS=. ./include # can be a list
 
 CC=gcc
 OPT=-O0
