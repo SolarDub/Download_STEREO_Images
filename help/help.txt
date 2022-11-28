@@ -2,19 +2,22 @@
 ******************************************************************************************
 
 *************************
-wget_Images.sh HELP FILE
+Download_STEREO_Images.sh HELP FILE
 *************************
 
 
 To execute:
 
-    ./wget_Images.sh [--help] [-c] [-d] [-r] [-s] [-u]
+    ./Download_STEREO_Images.sh [--help] [--ohelp] [-c] [-d] [-r] [-s] [-u]
 
 Description:
 
-    -h, --help	Prints this help file
+    --help	Prints this help file.
 
-    -c, --coord Prompts user to enter a star name, outputs the star's celestial 			coordinates before halting execution.
+    -o, --ohelp	Prints start/end dates of STEREO-A orbits.
+
+    -c, --coord Prompts user to enter a star name, outputs the star's celestial 
+		coordinates before halting execution.
 
     -d, --dir	Prompts user to change directory paths.
 
@@ -42,7 +45,9 @@ Description:
 		Images can be selected and downloaded to include a star of the user's
 		choice during a specified orbit.
 
-		The coordinates of the star will be acquired from SIMBAD, so the starname 		should be in a form usable by SIMBAD. For example, 12Sgr or 12 Sgr will 		both work. However, while DX Aqr will work, DXAQR will not.
+		The coordinates of the star will be acquired from SIMBAD, so the starname 
+		should be in a form usable by SIMBAD. For example, 12Sgr or 12 Sgr will 
+		both work. However, while DX Aqr will work, DXAQR will not.
 
 		The selected orbit number should lay between 1 and 17. Use the --ohelp
 		switch to see the list of STEREO A orbit numbers and their respective

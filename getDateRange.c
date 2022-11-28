@@ -1,4 +1,4 @@
-#include "./headers/getDateRange.h"
+#include "./include/getDateRange.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,14 +19,6 @@ int main(int argc, char *argv[])
   char datestring[9];
   char startdate[9];
   char dates[20];
-
-/*
-  INPUT FILE arrays initialization */
-  char file_name[120];               /* Filename of current HI-1A fits image */
-
-/*
-  STAMP array initialization */
-  float stamp[N_STAMP][N_STAMP];     /* Star single image stamp array */
 
   TARG star;                         /* Star characteristics structure */
   PTH dir;                           /* Directory paths structure */

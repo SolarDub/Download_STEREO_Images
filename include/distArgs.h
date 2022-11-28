@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "./headers/struct_target.h"
-#include "./headers/struct_path.h"
+#include "./struct_target.h"
+#include "./struct_path.h"
 
 #endif // distArgs_H

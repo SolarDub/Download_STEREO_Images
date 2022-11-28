@@ -4,15 +4,17 @@
 # Import functions #
 ####################
 
-source "./shfuncs/prompt.sh"
-source "./shfuncs/update.sh"
-source "./shfuncs/getVal.sh"
-source "./shfuncs/ifHelp.sh"
-source "./shfuncs/getOrbits.sh"
-source "./shfuncs/getStarname.sh"
-source "./shfuncs/getCoords.sh"
-source "./shfuncs/getDate.sh"
-source "./shfuncs/getMonthLDay.sh"
+SRCDIR="./lib/Bash"
+
+source ${SRCDIR}"/prompt.sh"
+source ${SRCDIR}"/update.sh"
+source ${SRCDIR}"/getVal.sh"
+source ${SRCDIR}"/ifHelp.sh"
+source ${SRCDIR}"/getOrbits.sh"
+source ${SRCDIR}"/getStarname.sh"
+source ${SRCDIR}"/getCoords.sh"
+source ${SRCDIR}"/getDate.sh"
+source ${SRCDIR}"/getMonthLDay.sh"
 
 SWS=${*}   # (Global) Array of switches
 
@@ -156,6 +158,7 @@ then
   fi
 
   DATES=$(./getDateRange.exe $starname $coords $BASDIR $HI1ADIR $ORBS)
+  echo ${DATES}
   STARTDATE=${DATES:0:8}
   ENDDATE=${DATES:9:8}
 

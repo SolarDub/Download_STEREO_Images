@@ -1,4 +1,4 @@
-#include "./headers/getStartDate.h"
+#include "../include/getStartDate.h"
 
 /********************************************************************************************/
 /*  Function:                                                                               */
@@ -63,11 +63,9 @@ int getStartDate(int orbit, double RAdeg, int *date_ymd, char *base_dir)
   /* Convert from Julian Date to UTC start date/time */
   JD_status = GUTC_JD(JD, date_ymd);
 
-//  printf("Orbit %d Start Date:\t%4d %02d %02d\n"\
-        , orbit, date_ymd_start[0],  date_ymd_start[1],  date_ymd_start[2]);
+//  printf("Orbit %d Start Date:\t%4d %02d %02d\n", orbit, date_ymd_start[0],  date_ymd_start[1],  date_ymd_start[2]);
 
-//  printf("Orbit %d Analysis Date:\t%4d %02d %02d\n\n"\
-        , orbit, date_ymd[0],  date_ymd[1],  date_ymd[2]);
+//  printf("Orbit %d Analysis Date:\t%4d %02d %02d\n\n", orbit, date_ymd[0],  date_ymd[1],  date_ymd[2]);
 
   return JD_status;
 }

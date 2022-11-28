@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <math.h>
-#include "./headers/constants.h"
+#include "./constants.h"
 
 int orbitStart(int orbit, int *datetimestartend, char *base_dir);
 double JD_GUTC(int *date_ymd, int *time_hms);
