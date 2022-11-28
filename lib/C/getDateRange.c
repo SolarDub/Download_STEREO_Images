@@ -1,12 +1,23 @@
 #include "./include/getDateRange.h"
 
+/******************************************************************************************/
+/*  Program:                                                                              */
+/*    - 'getDateRange'                                                                    */
+/* Main program to retrieve dates during which a star is observable in the STEREO-A HI-1  */
+/* field of view for a specified STEREO-A orbit.                                          */
+/*                                                                                        */
+/*  Input arguments:                                                                      */
+/*    - 1 (star.name):                   Name of Star                                     */
+/*    - 2 (star.RAhms, star.DECdms):     Celestial coordinates of star                    */
+/*    - 3 (dir.base):                    Base directory of Download Bash script           */
+/*    - 4 (dir.HI1A_data):               Base directory of STEREO HI-1A image fits files  */
+/*    - 5 (star.orbit):                  STEREO-A orbit number                            */
+/*  Output:                                                                               */
+/*    - dates:                           Orbit start_end dates: YYYMMDD_YYYMMDD           */
+/******************************************************************************************/
+
 int main(int argc, char *argv[])
 {
-
-/****************************************************************************************/
-/* Main program to read HI-1A images from a series of .fits files during a given orbit  */
-/* for a selected star. Flux values for a pixel can be found.                           */
-/****************************************************************************************/
 
 /*
   TIME variable initialization */
