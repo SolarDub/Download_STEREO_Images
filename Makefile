@@ -1,6 +1,6 @@
 BINARY=./bin/getDateRange # Binary executable plus relative path
-CODEDIRS=. ./lib ./lib/C # Code directories - can be a list
-IDIRS=. ./include # Include directories - can be a list
+CODEDIRS=. ./src ./src/C # Code directories - can be a list
+IDIRS=. $(CODEDIRS)/headers # Include directories - can be a list
 
 CC=gcc
 OPT=-O0
