@@ -14,7 +14,7 @@ Description:
 
     --help	Prints this help file.
 
-    -o, --ohelp	Prints start/end dates of STEREO-A orbits.
+    --ohelp	Prints start/end dates of STEREO-A orbits.
 
     -c, --coord Prompts user to enter a star name, outputs the star's celestial 
 		coordinates before halting execution.

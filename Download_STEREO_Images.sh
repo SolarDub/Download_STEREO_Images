@@ -4,7 +4,7 @@
 # Import functions #
 ####################
 
-SRCDIR="./lib/Bash"
+SRCDIR="./src/Bash"
 
 source ${SRCDIR}"/prompt.sh"
 source ${SRCDIR}"/update.sh"
