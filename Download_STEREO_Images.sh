@@ -18,7 +18,7 @@ source ${SRCDIR}"/getMonthLDay.sh"
 
 SWS=${*}   # (Global) Array of switches
 
-# Check if --help switch has been activated
+# Check if '--help' switch has been activated
 ifHelp
 
 ###################################
@@ -28,52 +28,41 @@ ifHelp
 echo ' '
 echo 'Setting up directory paths & URL...'
 
-#
-# Absolute path this script is in
-#
+# Absolute path to this script
 BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 DIRSFILENM="directory_file_lists.txt"
 DIRSFILENAME=${BASEDIR}/"tables"/${DIRSFILENM}
 
-
-#
 # Initialize empty key/value (global) arrays
-#
 KEYS=()  # Define empty key (input value description) array
 VALS=()  # Define empty value (input file/directory) array
 
 #
 # Read each key/value pair line from list file
 # separated with '=' delimiter
-#
 while IFS='=', read -r KEY VAL; do
 
   # Execute if the list of input switches is not empty
-  #
   if [[ $SWS == *"-d"* ]] || [[ $SWS == *"-u"* ]]
   then
     # Update directories/filenames as signified by switches
     # update function inputs $SWS, $KEY, $VAL, outputs $OUTVAL
-    #
     OUTVAL="$(update)"
   else
     OUTVAL="${VAL%"/"}"   # Remove trailing "/"
   fi
 
   # Add keys/values to respective arrays
-  #
   KEYS+=($KEY)
   VALS+=($OUTVAL)
 
 done < "$DIRSFILENAME"
 
 # Number of defined directories
-#
 NUM_VALS=${#VALS[@]}
 
 # Execute if the list of switches is not empty
-#
 if [[ $SWS == *"-d"* ]] || [[ $SWS == *"-u"* ]]
 then
   rm "$DIRSFILENAME"    # Remove the directory/file text file ready to be rewritten
@@ -91,17 +80,14 @@ fi
 # getVal function inputs $KEYS, $name, outputs $VALS
 
 # Base path to this script, programs and executables
-
 name='THIS_SCRIPT_DIR'
 BASDIR="$(getVal)"
 
 # Base path to STEREO HI-1A image data
-
 name='HI1A_DATA_DIR'
 HI1ADIR="$(getVal)"
 
 # Base URL to STEREO HI-1A image data
-
 name='HI1A_DATA_URL'
 HI1AURL="$(getVal)"
 
@@ -110,11 +96,14 @@ echo ${HI1ADIR}
 echo ${HI1AURL}
 echo ""
 
+# Exit if only directory/URL path changes are to be made
 if [[ $SWS == *"-d"* ]] || [[ $SWS == *"-u"* ]]
 then
   exit
 fi
 
+# Cannot choose automated date range in which star appears during a give orbit
+# and user-definable date range at the same time
 if [[ $SWS == *"-s"* ]] && [[ $SWS == *"-r"* ]]
 then
 
@@ -126,7 +115,9 @@ then
 
 fi
 
-
+########################################################################
+# Get star name & coordinates, and orbit during which to download data #
+########################################################################
 if [[ $SWS == *"-s"* ]] || [[ $SWS == *"-c"* ]]
 then
 
@@ -151,9 +142,9 @@ then
   starname="$(echo -e "${star}" | tr -d '[:space:]')"   # Remove remaining whitespaces
 
 
-  ########################################################
-  # Prompt user for orbit during which to download files #
-  ########################################################
+  #######################################################
+  # Prompt user for orbit during which to download data #
+  #######################################################
   ORBS="$(getOrbits)"
   if [[ $ORBS == "0" ]]; then
     exit
@@ -169,6 +160,9 @@ then
 
 fi
 
+###########################################################
+# Routine to input start-/end-date data range to download #
+###########################################################
 if [[ $SWS == *"-r"* ]]
 then
 
@@ -210,12 +204,11 @@ then
   exit
 fi
 
+#################
+# Download data #
+#################
 echo ' '
 echo 'Entering download routine...'
-
-################
-# Main Routine #
-################
 
 readonly Z=0         # Set zero variable
 
