@@ -1,4 +1,4 @@
-WORK IN PROGRESS
+:construction_worker: WORK IN PROGRESS :construction_worker:
 
 # Download_STEREO_Images
 This routine will STEREO HI-1A 20x20 deg field images from NASA/GSFC database, based on a user-defined data range, or the appearance of a user-selected star during a user-selected STEREO orbit.
