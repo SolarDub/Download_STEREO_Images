@@ -26,7 +26,7 @@ ifHelp
 ###################################
 
 echo ' '
-echo 'Setting up directory paths...'
+echo 'Setting up directory paths & URL...'
 
 #
 # Absolute path this script is in
@@ -51,7 +51,7 @@ while IFS='=', read -r KEY VAL; do
 
   # Execute if the list of input switches is not empty
   #
-  if [ -n "$SWS" ]
+  if [[ $SWS == *"-d"* ]] || [[ $SWS == *"-u"* ]]
   then
     # Update directories/filenames as signified by switches
     # update function inputs $SWS, $KEY, $VAL, outputs $OUTVAL
@@ -74,7 +74,7 @@ NUM_VALS=${#VALS[@]}
 
 # Execute if the list of switches is not empty
 #
-if [ -n "$SWS" ]
+if [[ $SWS == *"-d"* ]] || [[ $SWS == *"-u"* ]]
 then
   rm "$DIRSFILENAME"    # Remove the directory/file text file ready to be rewritten
 
@@ -109,6 +109,11 @@ echo ${BASDIR}
 echo ${HI1ADIR}
 echo ${HI1AURL}
 echo ""
+
+if [[ $SWS == *"-d"* ]] || [[ $SWS == *"-u"* ]]
+then
+  exit
+fi
 
 if [[ $SWS == *"-s"* ]] && [[ $SWS == *"-r"* ]]
 then
