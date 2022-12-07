@@ -1,7 +1,7 @@
 :construction_worker: WORK IN PROGRESS :construction_worker:
 
 # Download_STEREO_Images
-This routine will download STEREO-A Heliospheric Imager-1 20°×20° star-field images from NASA/GSFC database, based on a user-defined data range, or the appearance of a user-selected star during a user-selected STEREO orbit.
+This routine will download STEREO-A Heliospheric Imager-1 20°×20° star-field images from the NASA/GSFC STEREO database. Files can be selected based on a user-defined data range, or by the appearance of a user-defined star during a user-defined STEREO orbit.
 
 ## Requirements
 
