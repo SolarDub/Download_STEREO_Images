@@ -14,7 +14,7 @@ to ensure that all the mandatory dependencies are install prior to installing [a
 
 ## Help scripts
 
-To access the general help script, which includes the list of usable switches, at the terminal prompt, type
+To access the help file, which lists the usable switches, at the terminal prompt, type
 
     $ ./Download_STEREO_Images.sh --help
 
