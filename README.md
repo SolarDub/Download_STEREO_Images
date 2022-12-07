@@ -99,7 +99,7 @@ To select a star and orbit, type at the prompt:
 
 A pop up prompt will appear requesting the name of the star of interest. This is followed by a second prompt requesting the Orbit number during which the observation of the star took place. The start and end dates of the FITS image files to be downloaded will be displayed and the download will commence.
 
-Note that after entering the star name, the star's coordinates will be retrieved from SIMBAD using an [astroquery](https://github.com/astropy/astroquery/) sub-package. Incidentally, if only the coordinates of the star is required (as a check) without downloading the files, this can be performed by typing at the prompt:
+Note that after entering the star name, the star's coordinates will be retrieved from SIMBAD using an [astroquery](https://github.com/astropy/astroquery/) sub-package. Incidentally, if only the coordinates of the star are required without running the download procedure, this can be performed by typing at the prompt:
 
     $ ./Download_STEREO_Images.sh -c
 
