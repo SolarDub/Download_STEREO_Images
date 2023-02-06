@@ -13,6 +13,7 @@ source ${SRCDIR}"/ifHelp.sh"
 source ${SRCDIR}"/getOrbits.sh"
 source ${SRCDIR}"/getStarname.sh"
 source ${SRCDIR}"/getCoords.sh"
+source ${SRCDIR}"/checkCoords.sh"
 source ${SRCDIR}"/getDate.sh"
 source ${SRCDIR}"/getMonthLDay.sh"
 
@@ -133,6 +134,12 @@ then
     coords="$(getCoords $star)"
     echo "Coordinates of "${star}": "${coords}
     echo ""
+    check="$(checkCoords $coords)"
+    if [[ ${check} == 1 ]]; then
+      echo "Object lies outside image bounds. Exiting."
+      echo ""
+      exit
+    fi
   fi
 
   if [[ $SWS == *"-c"* ]]; then
