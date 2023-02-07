@@ -136,7 +136,7 @@ then
     echo ""
     check="$(checkCoords $coords)"
     if [[ ${check} == 1 ]]; then
-      echo "Object lies outside image bounds. Exiting."
+      echo ${star}" lies outside image bounds. Exiting."
       echo ""
       exit
     fi
