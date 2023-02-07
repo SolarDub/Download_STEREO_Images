@@ -4,18 +4,18 @@
 # Import functions #
 ####################
 
-SRCDIR="./src/Bash"
+SRCDIR="./src/Bash/"
 
-source ${SRCDIR}"/prompt.sh"
-source ${SRCDIR}"/update.sh"
-source ${SRCDIR}"/getVal.sh"
-source ${SRCDIR}"/ifHelp.sh"
-source ${SRCDIR}"/getOrbits.sh"
-source ${SRCDIR}"/getStarname.sh"
-source ${SRCDIR}"/getCoords.sh"
-source ${SRCDIR}"/checkCoords.sh"
-source ${SRCDIR}"/getDate.sh"
-source ${SRCDIR}"/getMonthLDay.sh"
+source ${SRCDIR}"prompt.sh"
+source ${SRCDIR}"update.sh"
+source ${SRCDIR}"getVal.sh"
+source ${SRCDIR}"ifHelp.sh"
+source ${SRCDIR}"getOrbits.sh"
+source ${SRCDIR}"getStarname.sh"
+source ${SRCDIR}"getCoords.sh"
+source ${SRCDIR}"checkCoords.sh"
+source ${SRCDIR}"getDate.sh"
+source ${SRCDIR}"getMonthLDay.sh"
 
 SWS=${*}   # (Global) Array of switches
 
