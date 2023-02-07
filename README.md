@@ -18,6 +18,10 @@ To access the help file, which lists the usable switches, at the terminal prompt
 
     $ ./Download_STEREO_Images.sh --help
 
+or simply
+
+    $ ./Download_STEREO_Images.sh
+
 
 ## Initializing
 
