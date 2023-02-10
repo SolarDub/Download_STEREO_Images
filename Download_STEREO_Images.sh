@@ -154,6 +154,8 @@ then
   #######################################################
   ORBS="$(getOrbits)"
   if [[ $ORBS == "0" ]]; then
+    echo "Exiting."
+    echo ""
     exit
   else
     echo "Orbit selected: ${ORBS}"
