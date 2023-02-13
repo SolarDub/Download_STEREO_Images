@@ -9,7 +9,7 @@ DEPFLAGS=-MP -MD
 # Automatically append -I onto each include directory
 INCDIRS=$(foreach D,$(IDIRS),-I$(D)/)
 # Compilation flags
-CFLAGS=-Wall -Wextra -g $(INCDIRS) $(OPT) $(DEPFLAGS)
+CFLAGS=-Wall -Wextra $(INCDIRS) $(OPT) $(DEPFLAGS)
 
 # For-style iteration (foreach) and regular expression completions (wildcard)
 # Output each filename with a .c suffix in the CODEDIRS directory
