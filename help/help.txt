@@ -14,16 +14,18 @@ Description:
 
     --help	Prints this help file.
 
+    --dhelp	Prints current and data directory paths and data URL path.
+
     --ohelp	Prints start/end dates of STEREO-A orbits.
 
-    -c, --coord Prompts user to enter a star name, outputs the star's celestial 
+    -c, --coord Prompts user to enter a star name, outputs the star's celestial
 		coordinates before halting execution.
 
     -d, --dir	Prompts user to change directory paths.
 
 		First path is to this script to be verified by the user.
 		This is necessary to establish a path to the directory/URL text file.
-		
+
 		Second path is to the base STEREO HI1A data directory.
 		Default has the form ##/##/stereo/h1a
 
@@ -34,7 +36,7 @@ Description:
 
 		Images can be selected and downloaded from a start date to an end date
 		as specified by the user. Both dates should be entered in the format:
-		
+
 		YYYY/MM/DD
 
 		The -r and -s switches cannot be used at  the same time and will
@@ -45,8 +47,8 @@ Description:
 		Images can be selected and downloaded to include a star of the user's
 		choice during a specified orbit.
 
-		The coordinates of the star will be acquired from SIMBAD, so the starname 
-		should be in a form usable by SIMBAD. For example, 12Sgr or 12 Sgr will 
+		The coordinates of the star will be acquired from SIMBAD, so the starname
+		should be in a form usable by SIMBAD. For example, 12Sgr or 12 Sgr will
 		both work. However, while DX Aqr will work, DXAQR will not.
 
 		The selected orbit number should lay between 1 and 17. Use the --ohelp
@@ -64,12 +66,10 @@ Description:
     -u, --url	Prompts user to change URL path.
 
 		This is the base path to the STEREO HI1A data.
-		
-		Default: 
+
+		Default:
 
 		https://stereo-ssc.nascom.nasa.gov/pub/ins_data/secchi_hi/L2/a/img/hi_1
 
 
 ******************************************************************************************
-
-
