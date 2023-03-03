@@ -40,7 +40,12 @@ A prompt will pop up requesting the base URL from where the FITS images files wi
 
 If not, this URL should be copied and pasted into the prompt field.
 
-#### Updating Directory Paths
+#### Viewing and Updating Directory Paths
+
+The directory paths (and the URL path discussed above) can be viewed by typing:
+
+$ ./Download_STEREO_Images.sh --dhelp
+
 
 To update the directory paths, at the prompt, type:
 
